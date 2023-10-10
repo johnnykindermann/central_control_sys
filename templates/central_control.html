@@ -1,0 +1,28 @@
+<!-- templates/central_control.html -->
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Central Control System</title>
+    <!-- Include necessary CSS and JavaScript libraries -->
+</head>
+<body>
+    <h1>Central Control System</h1>
+    
+    <!-- Display telemetry data and other system information -->
+    <div id="telemetry"></div>
+
+    <!-- Options for mission control -->
+    <form method="post" action="/create_mission">
+        <button type="submit">Create Mission</button>
+    </form>
+
+    <form method="post" action="/execute_mission">
+        <button type="submit">Execute Mission</button>
+    </form>
+    
+    <!-- Display alerts and notifications -->
+    <div id="alerts"></div>
+    
+    <!-- Add JavaScript code to update the UI dynamically -->
+</body>
+</html>
