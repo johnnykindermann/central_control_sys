@@ -1,6 +1,6 @@
-# app.py
+# main.py
 from flask import Flask
-from myflaskapp.central_control_routes import central_control_bp
+from app.routes.central_control_routes import central_control_bp
 
 app = Flask(__name__)
 

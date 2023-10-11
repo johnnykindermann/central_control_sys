@@ -10,13 +10,10 @@ def plan_mission():
     # Return the generated mission details
     return jsonify({'message': 'Mission planned successfully'})
 
-@mobile_app_mission_planning.route('/mission/history', methods=['GET'])
-def get_mission_history():
-    # Retrieve the history of completed missions
-    # Replace with actual data retrieval logic
-    mission_history = [
-        {'id': 1, 'name': 'Mission 1', 'status': 'completed'},
-        {'id': 2, 'name': 'Mission 2', 'status': 'completed'},
-        # ...
-    ]
-    return jsonify(mission_history)
+@mobile_app_mission_planning.route('/start_mission', methods=['POST'])
+def start_mission():
+    # Handle a POST request to start a mission
+    # Implement your mission execution logic here
+    return "Mission started successfully!"
+
+

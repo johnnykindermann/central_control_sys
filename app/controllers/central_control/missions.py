@@ -1,19 +1,17 @@
 # myflaskapp/mission.py
-from flask import Flask, render_template, request
+from flask import Blueprint
 
-app = Flask(__name__)
-
-@app.route('/create_mission', methods=['POST'])
+central_control_missions = Blueprint('central_control_missions', __name__)
+@central_control_missions.route('/create_mission', methods=['POST'])
 def create_mission():
     # Handle a POST request to create a mission
     # Implement your mission planning logic here
     return "Mission created successfully!"
 
-@app.route('/execute_mission', methods=['POST'])
-def execute_mission():
-    # Handle a POST request to execute a mission
+@central_control_missions.route('/execute_mission', methods=['POST'])
+def start_mission():
+    # Handle a POST request to start a mission
     # Implement your mission execution logic here
-    return "Mission execution started!"
+    return "Mission started successfully!"
 
-if __name__ == '__main__':
-    app.run(debug=True)
+

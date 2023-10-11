@@ -1,6 +1,5 @@
 # myflaskapp/central_control_routes.py
-from flask import Blueprint, render_template, request, jsonify
-from myflaskapp.mission import create_mission, execute_mission
+from flask import Blueprint, render_template, request
 
 # Create a Blueprint for central control routes
 central_control_bp = Blueprint('central_control', __name__)
@@ -12,16 +11,15 @@ def central_control():
     return render_template('central_control.html')
 
 @central_control_bp.route('/create_mission', methods=['POST'])
-def plan_mission():
-    # Handle a POST request to plan a mission
-    create_mission()
-    return jsonify({"message": "Mission planned successfully"})
+def create_mission():
+    # Handle a POST request to create a mission
+    return render_template('create_mission.html')
 
-@central_control_bp.route('/execute_mission', methods=['POST'])
+
+@central_control_bp.route('/start_mission', methods=['POST'])
 def start_mission():
-    # Handle a POST request to execute a mission
-    execute_mission()
-    return jsonify({"message": "Mission execution started"})
+    # Handle a POST request to start a mission
+    return render_template('start_mission.html')
 
 # Add more routes and views as needed
 
